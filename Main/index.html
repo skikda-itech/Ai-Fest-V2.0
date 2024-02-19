@@ -100,7 +100,6 @@
       <div class="container">
         <div class="section-header">
           <h2>Workshops</h2>
-          <p>Here are some of our mentors</p>
         </div>
         <div class="row">
           <div class="col-lg-4 col-md-6">
@@ -131,13 +130,8 @@
           <h2>Schedule</h2>
         </div>
 
-        <!-- <h3 class="sub-heading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia inventore rem tempore repudiandae a qui ut perferendis ipsa minus maxime quis sequi iure odio dignissimos, maiores explicabo officia porro facilis.</h3> -->
-
         <div class="tab-content row justify-content-center">
-
-          <!-- Schedule Day 1 -->
           <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
-
             <div class="row schedule-item">
               <div class="col-md-2"><time>09:00 AM</time></div>
               <div class="col-md-10">
@@ -287,7 +281,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-9">
               <ul id="faq-list">
-
+                
                 <li>
                   <a data-toggle="collapse" class="collapsed" href="#faq1">Why is hamza bald?<i class="fa fa-minus-circle"></i></a>
                   <div id="faq1" class="collapse" data-parent="#faq-list">
@@ -319,13 +313,17 @@
           <form action="" method="post" role="form" class="contactForm">
             <div class="form-row">
               <div class="form-group col-md-6">
-                <input type="text" name="name" class="form-control" id="name" placeholder="First Name"/>
+                <input type="text" class="form-control" name="first_name"  id="first_name" placeholder="First Name" required/>
                 <div class="validation"></div>
               </div>
               <div class="form-group col-md-6">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Last Name"/>
+                <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last Name" required/>
                 <div class="validation"></div>
-              </div>
+              </div> 
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Email"required/>
+              <div class="validation"></div>
             </div>
             <div class="form-group">
               <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
