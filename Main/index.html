@@ -281,7 +281,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-9">
               <ul id="faq-list">
-                
+
                 <li>
                   <a data-toggle="collapse" class="collapsed" href="#faq1">Why is hamza bald?<i class="fa fa-minus-circle"></i></a>
                   <div id="faq1" class="collapse" data-parent="#faq-list">
@@ -319,14 +319,24 @@
               <div class="form-group col-md-6">
                 <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Last Name" required/>
                 <div class="validation"></div>
-              </div> 
+              </div>
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="specialty"  id="specialty" placeholder="Specialty" required/>
+                <div class="validation"></div>
+              </div>
+              <div class="form-group col-md-6">
+                <select name="select" id="select" class="form-control">
+                  <option value="Licence 1">Licence 1</option>
+                  <option value="Licence 2">Licence 2</option>
+                  <option value="Licence 3">Licence 3</option>
+                  <option value="Master 1">Master 1</option>
+                  <option value="Master 2">Master 2</option>
+                  <option value="Doctorate">Doctorate</option>
+                </select>
+              </div>
             </div>
             <div class="form-group">
               <input type="email" class="form-control" name="email" id="email" placeholder="Email"required/>
-              <div class="validation"></div>
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
               <div class="validation"></div>
             </div>
             <div class="text-center"><button type="submit">Register</button></div>
