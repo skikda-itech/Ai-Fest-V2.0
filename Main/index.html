@@ -342,7 +342,6 @@
                 <option value="workshop">workshop</option>
               </select>
             </div>
-            <!-- Additional fields for Participant -->
             <div id="participantFields" style="display: none;">
               <div class="form-group">
                   <input type="text" class="form-control" name="projectName" id="projectName" placeholder="Project Name">
@@ -351,7 +350,27 @@
                   <textarea class="form-control" name="projectDescription" id="projectDescription" placeholder="Project Description"></textarea>
               </div>
             </div>
-
+            <div id="workshopFields" style="display: none;">
+              <div class="form-group">
+                  <label>Workshops to Attend:</label>
+                  <div>
+                      <input type="checkbox" id="workshop1" name="workshop[]" value="Workshop 1">
+                      <label for="workshop1">Workshop 1</label>
+                  </div>
+                  <div>
+                      <input type="checkbox" id="workshop2" name="workshop[]" value="Workshop 2">
+                      <label for="workshop2">Workshop 2</label>
+                  </div>
+                  <div>
+                      <input type="checkbox" id="workshop3" name="workshop[]" value="Workshop 3">
+                      <label for="workshop3">Workshop 3</label>
+                  </div>
+                  <div>
+                      <input type="checkbox" id="workshop4" name="workshop[]" value="Workshop 4">
+                      <label for="workshop4">Workshop 4</label>
+                  </div>
+              </div>
+            </div>                        
             <div class="form-group">
               <input type="email" class="form-control" name="email" id="email" placeholder="Email"required/>
               <div class="validation"></div>
