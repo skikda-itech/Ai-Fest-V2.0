@@ -26,6 +26,8 @@ function sendMail(event){
         field:document.getElementById('field').value,
         level:document.getElementById('level').value,
         role:document.getElementById('roleSelect').value,
+        project_name: document.getElementById('project_name').value,
+        project_description: document.getElementById('project_description').value,
         workshop: workshops.join(', ')
     }
 
