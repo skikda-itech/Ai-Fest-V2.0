@@ -16,6 +16,7 @@ function showAdditionalFields() {
 }
 function sendMail(event){
     event.preventDefault();
+    let role = document.getElementById('roleSelect').value;
     let workshopCheckboxes = document.querySelectorAll('input[name="workshop[]"]:checked');
     let workshops = Array.from(workshopCheckboxes).map(cb => cb.value);
 
@@ -25,13 +26,20 @@ function sendMail(event){
         email:document.getElementById('email').value,
         field:document.getElementById('field').value,
         level:document.getElementById('level').value,
-        role:document.getElementById('roleSelect').value,
+        role: role,
         project_name: document.getElementById('project_name').value,
         project_description: document.getElementById('project_description').value,
         workshop: workshops.join(', ')
     }
 
-    emailjs.send("service_23mf99i","Ticket_id",parms)
+    let templateId = 'Ticket_id';
+    if (role === 'workshop') {
+        templateId = 'Ticket_id';
+    } else {
+        templateId = 'template_2c3oyuu';
+    }
+
+    emailjs.send("service_23mf99i", templateId, parms)
     .then((res) => {
         document.getElementById('first_name').value='';
         document.getElementById('last_name').value='';
