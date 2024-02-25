@@ -142,22 +142,4 @@ jQuery(document).ready(function( $ ) {
     modal.find('#ticket-type').val(ticketType);
   })
 
-  function showAdditionalFields() {
-    var selectElement = document.getElementById('select');
-    var participantFields = document.getElementById('participantFields');
-    var workshopFields = document.getElementById('workshopFields');
-
-    if (selectElement.value === 'participant') {
-        participantFields.style.display = 'block';
-        workshopFields.style.display = 'none';
-    } else if (selectElement.value === 'workshop') {
-        participantFields.style.display = 'none';
-        workshopFields.style.display = 'block';
-    } else {
-        participantFields.style.display = 'none';
-        workshopFields.style.display = 'none';
-    }
-}  
-// custom code
-
 });

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AIFest v2.0 || Registration</title>
+    <link href="img/Final_Fest_Head-06.png" rel="icon">
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+        emailjs.init({
+        publicKey: "qvuc-MBkRlUu994vR",
+        });
+    })();
+</script>
+    <script src="js/register.js"></script>
+    <link href="css/register.css" rel="stylesheet">
+</head>
+
+<body>
+    <section class="form">
+        <div class="form-content">
+            <div class="form-text">
+                <img src="img/Final_AiFest-01.png" width="15%" alt="AIFest">
+                <h2>Registration</h2> <br>
+        </div>
+        <div class="form">
+        <form id="Ticket_id">
+            <div>
+                <div>
+                    <input type="text" id="first_name" placeholder="First Name" required/>
+                </div> <br>
+                <div>
+                    <input type="text" id="last_name" placeholder="Last Name" required/>
+                </div> <br>
+                <div>
+                    <input type="email" id="email" placeholder="Email" required/>
+                </div> <br>
+                <div>
+                    <input type="text" id="field" placeholder="Field" required/>
+                </div> <br>
+                <div>
+                <select name="select" id="level" required>
+                    <option id="licence_1">Licence 1</option>
+                    <option id="licence_2">Licence 2</option>
+                    <option id="licence_3">Licence 3</option>
+                    <option id="master_1">Master 1</option>
+                    <option id="master_2">Master 2</option>
+                    <option id="doctorate">Doctorate</option>
+                </select>
+                </div> <br>
+            </div>
+            <div>
+            <select id="roleSelect" name="select" required onchange="showAdditionalFields()">
+                    <option value="visitor">Visitor</option>
+                    <option value="participant">Participant</option>
+                    <option value="workshop">Workshop</option>
+            </select>
+            </div> <br>
+            <!-- optional -->
+            <div id="participantFields" style="display: none;">
+                <div>
+                    <input type="text" name="project_name" placeholder="Project Name" required>
+                </div> <br>
+                <div>
+                    <textarea name="project_description" placeholder="Project Description" required></textarea>
+                </div>
+            </div> <br>
+            <div id="workshopFields" style="display: none;">
+                <h2>Workshops to Attend:</h2> <br>
+                <div class="checkbox-container">
+                    <div class="checkbox-item">
+                        <label for="workshop1">Workshop</label>
+                        <input type="checkbox" id="workshop1" name="workshop[]" value="Workshop 1">
+                    </div>
+                    <div class="checkbox-item">
+                        <label for="workshop2">Workshop</label>
+                        <input type="checkbox" id="workshop2" name="workshop[]" value="Workshop 2">
+                    </div>
+                    <div class="checkbox-item">
+                        <label for="workshop3">Workshop</label>
+                        <input type="checkbox" id="workshop3" name="workshop[]" value="Workshop 3">
+                    </div>
+                    <div class="checkbox-item">
+                        <label for="workshop4">Workshop</label>
+                        <input type="checkbox" id="workshop4" name="workshop[]" value="Workshop 4">
+                    </div>
+                </div>
+            </div> <br>
+            <!-- optional -->
+            <div> 
+                <button type="submit" class="btn" onclick="sendMail()">Register</button>
+                <a href="index.html" class="btn">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+</section>
+</body>
+</html>
