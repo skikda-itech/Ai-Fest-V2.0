@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Registration</title>
+    <title>AIFest v2.0 || Registration</title>
+    <link href="img/Final_Fest_Head-06.png" rel="icon">
+
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
@@ -12,15 +14,16 @@
         });
     })();
 </script>
-    <script src="Main/js/register.js"></script>
-    <link href="Main/css/register.css" rel="stylesheet">
+    <script src="js/register.js"></script>
+    <link href="css/register.css" rel="stylesheet">
 </head>
 
 <body>
-<section class="form">
-    <div class="form-content">
-        <div class="form-text">
-            <h2>Registration</h2> <br>
+    <section class="form">
+        <div class="form-content">
+            <div class="form-text">
+                <img src="img/Final_AiFest-01.png" width="15%" alt="AIFest">
+                <h2>Registration</h2> <br>
         </div>
         <div class="form">
         <form id="Ticket_id">
@@ -88,11 +91,11 @@
             <!-- optional -->
             <div> 
                 <button type="submit" class="btn" onclick="sendMail()">Register</button>
+                <a href="index.html" class="btn">Cancel</a>
             </div>
         </form>
     </div>
 </div>
-<button href="index.html" class="btn">Cancel</button>
 </section>
 </body>
 </html>
