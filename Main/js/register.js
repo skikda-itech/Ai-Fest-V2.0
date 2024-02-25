@@ -14,7 +14,11 @@ function showAdditionalFields() {
         workshopFields.style.display = 'none';
     }
 }
-function sendMail(){
+function sendMail(event){
+    event.preventDefault();
+    let workshopCheckboxes = document.querySelectorAll('input[name="workshop[]"]:checked');
+    let workshops = Array.from(workshopCheckboxes).map(cb => cb.value);
+
     let parms={
         first_name:document.getElementById('first_name').value,
         last_name:document.getElementById('last_name').value,
@@ -22,8 +26,9 @@ function sendMail(){
         field:document.getElementById('field').value,
         level:document.getElementById('level').value,
         role:document.getElementById('roleSelect').value,
-        workshop:document.getElementById('workshopSelect').value,
-        message:document.getElementById('message').value
+        project_name: document.getElementById('project_name').value,
+        project_description: document.getElementById('project_description').value,
+        workshop: workshops.join(', ')
     }
 
     emailjs.send("service_23mf99i","Ticket_id",parms)
@@ -34,8 +39,7 @@ function sendMail(){
         document.getElementById('field').value='';
         document.getElementById('level').value='';
         document.getElementById('roleSelect').value='';
-        document.getElementById('workshopSelect').value='';
-        document.getElementById('message').value='';
+        workshopCheckboxes.forEach(cb => cb.checked = false);
         console.log('res');
         alert('Email sent successfully');
     })

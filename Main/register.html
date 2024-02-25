@@ -55,16 +55,16 @@
             <select id="roleSelect" name="select" required onchange="showAdditionalFields()">
                     <option value="visitor">Visitor</option>
                     <option value="participant">Participant</option>
-                    <option value="workshop">Workshop</option>
+                    <option value="workshop">Attendant</option>
             </select>
             </div> <br>
             <!-- optional -->
             <div id="participantFields" style="display: none;">
                 <div>
-                    <input type="text" name="project_name" placeholder="Project Name" required>
+                    <input type="text" id="project_name" placeholder="Project Name" required>
                 </div> <br>
                 <div>
-                    <textarea name="project_description" placeholder="Project Description" required></textarea>
+                    <textarea id="project_description" placeholder="Project Description" required></textarea>
                 </div>
             </div> <br>
             <div id="workshopFields" style="display: none;">
@@ -90,7 +90,7 @@
             </div> <br>
             <!-- optional -->
             <div> 
-                <button type="submit" class="btn" onclick="sendMail()">Register</button>
+                <button type="submit" class="btn" onclick="sendMail(event)">Register</button>
                 <a href="index.html" class="btn">Cancel</a>
             </div>
         </form>
