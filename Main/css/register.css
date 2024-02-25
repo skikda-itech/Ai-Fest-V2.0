@@ -7,12 +7,12 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 :root{
     --text-color: #fff;
     --bg-color: #000;
-    --main-color: #0fa316;
+    --main-color: #f82249;
 
     --h1-font: 6rem;
     --h2-font: 3rem;
